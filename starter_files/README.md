@@ -24,41 +24,71 @@ Below workflow depicts Deployment pipeline using Docker image as computer target
 ## Auto ML Experiment
 
   - Screenshot of Registered Dataset in ML Studio: 
+    ![Registered_Model_Dataset](Registered_Model_Dataset.JPG)
 
   - Screenshot showing Experiment is completed:
+    ![Automl_Experiment_completion](Automl_Experiment_completion.JPG)
 
   - Screenshot of Best Model from experiment:
-
+    ![Best_model_1](Best_model_1.JPG)
+    ![Best_model_2](Best_model_2.JPG)
+    
 ## Deploy the Best Model
 
   - Screenshot showing best Deployed Model:
+    ![best_model_deployed_2](best_model_deployed_2.JPG)
 
 ## Enable Logging
 
-  - Screenshot showing "Application Insight" is enabled in details tab of the endpoint: 
+  - Screenshot showing "Application Insight" is enabled in details tab of the endpoint:
+    ![best_model_deployed_1](best_model_deployed_1.JPG) 
 
   - Screenshot showing logs by running the provided logs.py script: 
+    ![logs](logs.JPG) 
 
 ## Swagger Documentation
 
   - Screenshot showing swagger runs on localhost showing http API methods and response for the model: 
 
+    Couldn't run swagger.sh file in windows powershell because bash feature is not enabled in the Lab environment. In order to run the bash file, Linux bash feature should be enabled in the windows environment. As a result I am getting the error as shown in below screen shot.
+
+    ![Swagger](Swagger.JPG) 
+
+    However I have listed steps to run the swagger are listed below. 
+    1. Download the swagger.json URI using wget command from shell inside swagger folder where swagger.sh and serve.py files are located using command ```wget http://d3691a7e-0ce7-4de7-b353-018cdfc6812b.eastus.azurecontainer.io/swagger.json```. 
+    2. Run the swagger.sh bash file using command ```bash swagger.sh``` to run Swagger UI container on port 8080. 
+    3. Run the localhost on new browser to launch default swagger page. 
+    4. Run the python script file ```python serve.py``` to run the content of directory where swagger.json is present on http server port 8000. 
+    5. Go back to running swagger instance and type http://locahost:8000/swagger.json. 
+    6. On swagger documentation, deployed model API can be seen GET and POST. On expanding POST/score it further shows what JSON data format is expected. 
+    7. Post the sample request and get the response in JSON format from http POST API. 
+    
+     
+
 ## Consume Model Endpoints
 
   - Screenshot showing endpoint.py scripts run against the API producing JSON output from the model:
+    ![json_output](json_output.JPG) 
 
 ## Create and Publish a Pipeline
 
-  - Screenshot of pipeline section of the Azure ML Studio showing pipeline has been created: 
+  - Screenshot of pipeline section of the Azure ML Studio showing pipeline has been created:
+    ![pipleline_completed_1](pipleline_completed_1.JPG)
+    ![pipeline_completed_2](pipeline_completed_2.JPG)  
 
   - Screenshot of pipeline section of the Azure ML Studio showing pipleline endpoints: 
+    ![Pipleline_endpoints](Pipleline_endpoints.JPG) 
 
   - Screenshot showing Bankmarketing dataset with the AutoML module:
+    ![Bankmarketing_data_automl_run](Bankmarketing_data_automl_run.JPG) 
 
-  - Screenshot of "Published pipleline overview" showing Rest endpoint and status of Active: 
+  - Screenshot of "Published pipleline overview" showing Rest endpoint and status of Active:
+     ![published_pipeline_overview](published_pipeline_overview.JPG) 
 
   - Screenshot of Jupyter notebook showing "Use Runs Widget" with step runs:
+    ![Run_widget_details](Run_widget_details.JPG) 
 
-  - Screenshot of ML studio showing the scheduled run: 
 
 ## Screencast video link
+   Attached link to screenshot summarizes all steps completed in this project. 
+   https://youtu.be/vlzcMSxXPo4
