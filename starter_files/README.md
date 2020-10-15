@@ -49,21 +49,20 @@ Below workflow depicts Deployment pipeline using Docker image as computer target
 ## Swagger Documentation
 
   - Screenshot showing swagger runs on localhost showing http API methods and response for the model: 
+    ![swagger_api](swagger_api.JPG)
+    ![Swagger_post_api](Swagger_post_api.JPG)
+    ![swagger_api](swagger_api.JPG)
 
-    Couldn't run swagger.sh file in windows powershell because bash feature is not enabled in the Lab environment. In order to run the bash file, Linux bash feature should be enabled in the windows environment. As a result I am getting the error as shown in below screen shot.
 
-    ![Swagger](Swagger.JPG) 
-
-    However I have listed steps to run the swagger are listed below. 
-    1. Download the swagger.json URI using wget command from shell inside swagger folder where swagger.sh and serve.py files are located using command ```wget http://d3691a7e-0ce7-4de7-b353-018cdfc6812b.eastus.azurecontainer.io/swagger.json```. 
-    2. Run the swagger.sh bash file using command ```bash swagger.sh``` to run Swagger UI container on port 8080. 
-    3. Run the localhost on new browser to launch default swagger page. 
+    Steps to run swagger UI are listed below. 
+    1. Download the swagger.json inside swagger folder where swagger.sh and serve.py files are located. 
+    2. Run the swagger.sh bash file using command ```bash swagger.sh``` to run Swagger UI container on port 9000:8080. 
+    3. Run the http://localhost:9000 on new browser to launch default swagger page. 
     4. Run the python script file ```python serve.py``` to run the content of directory where swagger.json is present on http server port 8000. 
     5. Go back to running swagger instance and type http://locahost:8000/swagger.json. 
     6. On swagger documentation, deployed model API can be seen GET and POST. On expanding POST/score it further shows what JSON data format is expected. 
-    7. Post the sample request and get the response in JSON format from http POST API. 
-    
-     
+  
+ 
 
 ## Consume Model Endpoints
 
