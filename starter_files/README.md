@@ -51,7 +51,7 @@ Below workflow depicts Deployment pipeline using Docker image as computer target
   - Screenshot showing swagger runs on localhost showing http API methods and response for the model: 
     ![swagger_api](swagger_api.JPG)
     ![Swagger_post_api](Swagger_post_api.JPG)
-    ![swagger_api](swagger_api.JPG)
+    ![api_response](api_response.JPG)
 
 
     Steps to run swagger UI are listed below. 
